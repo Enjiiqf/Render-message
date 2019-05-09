@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>留言清单</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script src="../vue.js"></script>
+</head>
+<body>
+  <div id="app" v-cloak style="width: 500px; margin: 0 auto;">
+    <div class="message">
+      <v-input v-model="username"></v-input>
+      <v-textarea v-model="message" ref="message"></v-textarea>
+      <button @click="handleSend">发布</button>
+    </div>
+    <list :list="list" @reply="handleReply"></list>
+  </div>
+	<script src="input.js" charset="utf-8"></script>
+  	<script src="list.js" charset="utf-8"></script>
+  	<script src="index.js" charset="utf-8"></script>	
+</body>
+</html>
